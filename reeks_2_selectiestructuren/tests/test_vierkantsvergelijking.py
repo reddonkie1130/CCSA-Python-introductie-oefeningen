@@ -18,8 +18,8 @@ def test_vierkantsvergelijking_twee_wortels(capsys, monkeypatch):
     invoer = ["1.0", "-5.0", "6.0"]
     uitvoer = geef_invoer_aan_vierkantsvergelijking_return_uitvoer(capsys, monkeypatch, invoer)
     assert uitvoer[0] == "twee wortels"
-    assert float(uitvoer[1]) == pytest.approx(2.0, abs=1e-6)
-    assert float(uitvoer[2]) == pytest.approx(3.0, abs=1e-6)
+    assert float(uitvoer[1]) == pytest.approx(3.0, abs=1e-6)
+    assert float(uitvoer[2]) == pytest.approx(2.0, abs=1e-6)
 
 def test_vierkantsvergelijking_geen_wortels(capsys, monkeypatch):
     invoer = ["1.0", "0.0", "2.0"]
@@ -36,8 +36,8 @@ def test_vierkantsvergelijking_decimalen(capsys, monkeypatch):
     invoer = ["1.0", "-5.5", "7.36"]
     uitvoer = geef_invoer_aan_vierkantsvergelijking_return_uitvoer(capsys, monkeypatch, invoer)
     assert uitvoer[0] == "twee wortels"
-    assert float(uitvoer[1]) == pytest.approx(2.3, abs=1e-6)
-    assert float(uitvoer[2]) == pytest.approx(3.2, abs=1e-6)
+    assert float(uitvoer[1]) == pytest.approx(3.2, abs=1e-6)
+    assert float(uitvoer[2]) == pytest.approx(2.3, abs=1e-6)
 
 def test_vierkantsvergelijking_symmetrisch(capsys, monkeypatch):
     invoer = ["1.0", "-2.0", "1.0"]
